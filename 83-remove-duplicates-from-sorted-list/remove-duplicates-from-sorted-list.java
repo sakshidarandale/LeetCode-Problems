@@ -8,21 +8,20 @@
  *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
  * }
  */
-
 class Solution {
     public ListNode deleteDuplicates(ListNode head) 
     {
-        ListNode curr = head;
+        ListNode temp = head;
 
-        while(curr!= null && curr.next != null)
+        while(temp != null && temp.next != null)
         {
-            if(curr.val == curr.next.val)
+            if(temp.val == temp.next.val)
             {
-                curr.next = curr.next.next;
+                temp.next = temp.next.next;
             }
             else
             {
-                curr = curr.next;
+                temp = temp.next;
             }
         }
         return head;
