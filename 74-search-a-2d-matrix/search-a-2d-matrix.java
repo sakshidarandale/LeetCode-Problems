@@ -10,17 +10,15 @@ class Solution {
             {
                 return true;
             }
+            else if(target < matrix[row][col])
+            {
+                col--;   //move towards left
+            } 
+               
             else
             {
-                if(target < matrix[row][col])
-                {
-                    col--;   //move towards left
-                }
-                else
-                {
-                    row++;   //move towards bottom
-                }
-            }
+                row++;   //move towards bottom
+            }  
         }
         return false;
     }
